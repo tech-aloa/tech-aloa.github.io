@@ -43,7 +43,45 @@ E: Storage Gateway  -> 낮은 지연 시간으로 클라우드 데이터를 접�
 
 디비 부하를 대비하여, 읽기 분산으로 해결가능한 경우, 스케일 아웃을 선택할 수 있습니다. 이를 위해 AWS 에서는 RDS(Relational Database Service)에 대하여 read replica(읽기전용복제본)을 제공합니다. 해당 어플리케이션에서는 RDS를 사용하므로 MySQL, MariaDB, PostgreSQL, Oracle, SQL Server, Aurora 등이 선택지가 될 수 있으며, NoSQL 인 DynamoDB는 제외됩니다. Redshift 는 자동 확장 및 read replica를 제공하지 않습니다. S3는 데이터베이스가 아닌 저장소입니다. 저장소 중에서도 object storage입니다. 
 
-Redshift는 RDS와 scaling, storage capacity, data structure 측면에서 다릅니다. 
-Redshift는 다음과 같은 특징을 가집니다. 첫째, RDS 에 비해 Scaling 제한이 있습니다. 
-둘째, Petabyte 까지 수직확장이 가능합니다. RDS 의 수직확장 제한은 인스턴스 별 다르지만 16에서 64TB 입니다. 
-셋째, RDS 는 row-oriented 구조인 반면, Redshift는 column-oriented 구조입니다.   
+Redshift는 RDS와 scaling, storage capacity, data structure 측면에서 다릅니다. Redshift는 다음과 같은 특징을 가집니다. <br/>
+첫째, RDS 에 비해 Scaling 제한이 있습니다. <br/>
+둘째, Petabyte 까지 수직확장이 가능합니다. RDS 의 수직확장 제한은 인스턴스 별 다르지만 16에서 64TB 입니다. <br/>
+셋째, RDS 는 row-oriented 구조인 반면, Redshift는 column-oriented 구조입니다. <br/>
+
+//문제 
+
+정답은 <span class="spoiler">B 입니다.</span>
+
+EBS(Elastic Block Storage)에는 4가지 종류가 있으며, <표>와 같습니다. 먼저, 저장소의 성능을 측정하기 위해 IOPS(Input Output Oprations per seconds), throughput 이 사용됩니다. SSD는 높은 IOPS 를 가지고 있으며, HDD는 높은 throughput을 갖습니다. HDD가 SSD보다 저렴합니다.
+
+// 표 그림 
+
+// 문제 
+
+
+정답은 <span class="spoiler">B 입니다.</span>
+사용자는 S3(Object Storage)에 이미지, 데이터, 영상 등 다양한 파일들을 업로드 할 수 있습니다. S3는 객체 생성과 동시에 SQS(Simple Queue Service)에 메세지를 삽입하라는 Lambda 함수를 호출합니다. EC2는 SQS로부터 메시지를 읽고 DynamoDB에 저장합니다. EC2가 중단되면, 전체 시스템이 중단되므로 단일 EC2는 단일 장애점(single point of failure)을 발생시킬 수 있습니다. 따라서 한 쪽 AZ가 재해를 당해도, 다른 AZ가 돌아갈 수 있도록 두개의 AZ를 만들어 다수의 EC2를 운영해야합니다.
+
+//문제 
+
+정답은 <span class="spoiler">B 입니다.</span>
+
+버킷 정책 및 IAM Policy는 S3에서 쓰기, 읽기 등 작업에 대한 권한을 특정 사용자에게 부여하는 것을 의미합니다. CORS는 S3에 대한 Cross-Origin 액세스를 허용합니다.
+
+//문제 
+
+정답은 <span class="spoiler">D 입니다.</span>
+
+버킷 정책을 사용하여서 S3버킷에 액세스할 수 있는 VPC엔드포인트를 생성합니다. 오직 특정 엔드포인트로만 오는 트래픽을 받을 수 있으며, 이는 EC@ 인스턴스 서브넷의 라우팅 테이블에 연결될 수 있습니다.
+
+보기에 나온 네트워킹 용어들을 알아봅시다.
+
+//그림 및 설명 
+
+//문제 
+
+정답은 <span class="spoiler">C 입니다.</span>
+
+//문제 
+
+정답은 <span class="spoiler">C 입니다.</span>
