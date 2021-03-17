@@ -19,17 +19,17 @@ Access Key 보관에 대한 문제입니다. Access Key 를 가진 어떠한 사
 
 Stateless 웹 서버는 세션 정보를 서버에 저장하지 않습니다. Stateful 서비스 같은 경우, 클라이언트 A 가 검증된 사용자인지 확인하기 위해 서버에 저장된 세션을 확인합니다. 하지만, 트래픽의 급증으로 서버 확장(Scale-out)이 필요할 때, Stateful 서비스 같은 경우, 세션 정보를 옮겨주는 부수적인 일을 하여야 합니다. <그림>에서도 보듯이 Stateless 웹 서버는 두 개 이상의 서버가 동일한 세션 데이터를 참조하므로 효율적으로 관리할 수 있습니다.
 
-//그림 
+//그림 웹서버 
 
 DynamoDB, ElastiCache 를 고려할 수 있습니다. 적용사례(<a href="https://amzn.to/3vz2Y2x">DynamoDB</a>, <a href="https://amzn.to/3bRP4Rh">ElastiCache</a>)를 참조하세요.
 
-A: CloudWatch -> 리소스의 지표(Metrics)를 모니터링합니다. </br>
-B: DynamoDB -> NoSQL 데이터베이스입니다. </br>
-C: Elastic Load Balancing -> 트래픽을 분산합니다. </br>
-D: ElastiCache -> 인메모리에 저장되어 빠른 속도를 지원합니다. </br>
-E: Storage Gateway  -> 낮은 지연 시간으로 클라우드 데이터를 접근하는 하이브리드 저장 서비스입니다. </br>
+A: CloudWatch -> 리소스의 지표(Metrics)를 모니터링합니다. <br/>
+B: DynamoDB -> NoSQL 데이터베이스입니다. <br/>
+C: Elastic Load Balancing -> 트래픽을 분산합니다. <br/>
+D: ElastiCache -> 인메모리에 저장되어 빠른 속도를 지원합니다. <br/>
+E: Storage Gateway  -> 낮은 지연 시간으로 클라우드 데이터를 접근하는 하이브리드 저장 서비스입니다. <br/>
 
-//그림 
+//그림 스토리지 게이트웨이 
 
 //문제 
 
@@ -37,3 +37,13 @@ E: Storage Gateway  -> 낮은 지연 시간으로 클라우드 데이터를 접�
 
 본 문제에서 집중해야 할 단어는 Durability(내구성)입니다. 데이터를 오래 보존하기 위해서 의도치 않은 작업으로부터 보호되어야 합니다. S3에서 버전 시스템은 파일의 수정 및 삭제를 기록해둠으로써, 이전 버전 내용을 유지할 수 있습니다. 반면 snapshot 은 snapshot 생성 후 발생한 작업에 대한 기록은 없으므로 데이터 유실이 더 클 수 있습니다. EC2 instance storage 는 EC2 에 종료/중지와 함께 손실되므로 수명 주기가 짧습니다(Ephemeral). 내구성이 중요한 데이터는 이곳에 보관되지 않도록 주의하여야 합니다. 
 
+//문제 
+
+정답은 <span class="spoiler">C 입니다.</span>
+
+디비 부하를 대비하여, 읽기 분산으로 해결가능한 경우, 스케일 아웃을 선택할 수 있습니다. 이를 위해 AWS 에서는 RDS(Relational Database Service)에 대하여 read replica(읽기전용복제본)을 제공합니다. 해당 어플리케이션에서는 RDS를 사용하므로 MySQL, MariaDB, PostgreSQL, Oracle, SQL Server, Aurora 등이 선택지가 될 수 있으며, NoSQL 인 DynamoDB는 제외됩니다. Redshift 는 자동 확장 및 read replica를 제공하지 않습니다. S3는 데이터베이스가 아닌 저장소입니다. 저장소 중에서도 object storage입니다. 
+
+Redshift는 RDS와 scaling, storage capacity, data structure 측면에서 다릅니다. 
+Redshift는 다음과 같은 특징을 가집니다. 첫째, RDS 에 비해 Scaling 제한이 있습니다. 
+둘째, Petabyte 까지 수직확장이 가능합니다. RDS 의 수직확장 제한은 인스턴스 별 다르지만 16에서 64TB 입니다. 
+셋째, RDS 는 row-oriented 구조인 반면, Redshift는 column-oriented 구조입니다.   
