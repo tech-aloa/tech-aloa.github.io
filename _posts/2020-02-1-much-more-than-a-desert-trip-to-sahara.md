@@ -6,7 +6,7 @@ categories: [ Travel ]
 image: assets/images/16.jpg
 ---
 
-<img src="assets/images/AWS/1.PNG"/>
+<img src="/assets/images/AWS/1.PNG"/>
 
 정답은 <span class="spoiler">A 입니다.</span>
 
