@@ -47,9 +47,21 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 
 
-<img class="question" src="/assets/images/AWS/SAA_C02_07.PNG"/>
-<img class="question" src="/assets/images/AWS/SAA_C02_08.PNG"/>
+<img src="/assets/images/AWS/SAA_C02_07.PNG"/>
+<img src="/assets/images/AWS/SAA_C02_08.PNG"/>
+
+정답은 <span class="spoiler">C,D 입니다.</span>
+
+- Keyword : SSE-S3, SSE-KMS, SSE-C
+Server-side encryption with Amazon S3-Managed Keys(SSE-S3)  
+<img src="/assets/images/AWS/SAA_C02_08_01.png"/>
+Server-side encryption with Customer Master Keys(CMKs) Stored in AWS Key Management Service(SSE-KMS)  
+<img src="/assets/images/AWS/SAA_C02_08_02.png"/>
+Server-side encryption with Customer-Provided Encryption Keys(SSE-C)  
+<img src="/assets/images/AWS/SAA_C02_08_03.png"/>
+당신이 가진 암호화 방식으로 암호화할 수 있도록 해준다. 
 <img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
+
 정답은 <span class="spoiler">A,B 입니다.</span>
 
 <table class="table table-bordered">
@@ -71,11 +83,11 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 	<td>자주 액세스하는 데이터</td>
 </tr>
 <tr>
-	<th scope="row">Storage Price/month</th>
-	<td>GB당 0.00099 USD</td>
-	<td>GB당 0.004 USD</td>
-	<td>GB당 0.0125 USD</td>
-	<td>GB당 0.021 USD</td>
+	<th scope="row">Storage Price(USD/month for 1GB)</th>
+	<td>0.00099 USD</td>
+	<td>0.004 USD</td>
+	<td>0.0125 USD</td>
+	<td>0.021 USD</td>
 </tr>
 <tr>
 	<th scope="row">Retrieval Price(PUT, COPY, POST, LIST 요청  1,000개당)</th>
@@ -86,7 +98,7 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 </tr>
 </table>
 
-<img class="question" src="/assets/images/AWS/SAA_C02_10.PNG"/>
+<img src="/assets/images/AWS/SAA_C02_10.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
