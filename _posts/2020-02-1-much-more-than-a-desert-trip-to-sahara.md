@@ -54,7 +54,7 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
-<img src="/assets/images/AWS/SAA_C02_10_01.png"/>
+<img class="center" src="/assets/images/AWS/SAA_C02_10_01.png"/>
 
 A. 온디맨드 인스턴스 : 
 - 장기 약정이 없다<br/>
