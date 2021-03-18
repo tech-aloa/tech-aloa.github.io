@@ -6,19 +6,19 @@ categories: [ Travel ]
 image: assets/images/16.jpg
 ---
 
-<img src="/assets/images/AWS/1.PNG"/>
+<img src="/assets/images/AWS/SAA_C02_1.PNG"/>
 
 정답은 <span class="spoiler">A 입니다.</span>
 
 Application Load Balancer의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
 
-//문제 
+<img src="/assets/images/AWS/SAA_C02_2.PNG"/>
 
 정답은 <span class="spoiler">D 입니다.</span>
 
 SQS는 큐로부터 메시지를 가져오는 방식에 있어서, short polling과 long polling을 제공한다. short polling은 빈 대기열이라도 즉시 응답을 하며, long polling은 메시지가 있을 때만 응답을 하므로 더 저렴한 방식이다. 본 문제에서는 빈 응답수(empty receives)를 최소화하여 비용을 줄이고자하므로, long polling으로 바꾸어야 한다. long polling은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 늘림으로써 적용할 수 있다. 
 
-//문제 
+<img src="/assets/images/AWS/SAA_C02_3.PNG"/>
 
 정답은 <span class="spoiler">B 입니다.</span>
 
@@ -29,7 +29,7 @@ B: Volume Gateway (cached mode) -> 캐시모드에서 주 데이터는 S3에 저
 C: AWS DataSync ->온프레미스와 AWS 스토리지간 데이터 이동을 지원하는 서비스입니다.<br/>
 D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전체 데이터 셋에 대한 낮은 지연시간을 제공합니다. 이는 비동기적으로 AWS에 백업됩니다. <br/>
 
-// 문제 
+<img src="/assets/images/AWS/SAA_C02_4.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
@@ -38,13 +38,12 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 - Public subnet : Internet Gateway / ELB / Public IP, Elastic IP / Net Instance
 - Private subnet : private ip / internet inbound, outbound x / connection w/ other subnets
 
-// 문제 
+<img src="/assets/images/AWS/SAA_C02_5.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
 
-
-// 문제 
+<img src="/assets/images/AWS/SAA_C02_6.PNG"/>
 
 A. 온디맨드 인스턴스 : 
 - No time commitment<br/>
