@@ -45,15 +45,28 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 <img src="/assets/images/AWS/SAA_C02_06.PNG"/>
 
-A. 온디맨드 인스턴스 : 
-- No time commitment<br/>
-- need to pay for hours which you used<br/>
-- applications cannot be interrupted<br/>
 
-B. 스팟 인스턴스 : 
-- applications can be interrupted <br/>
 
 <img src="/assets/images/AWS/SAA_C02_07.PNG"/>
 <img src="/assets/images/AWS/SAA_C02_08.PNG"/>
 <img src="/assets/images/AWS/SAA_C02_09.PNG"/>
 <img src="/assets/images/AWS/SAA_C02_10.PNG"/>
+
+정답은 <span class="spoiler">A,B 입니다.</span>
+
+<img src="/assets/images/AWS/SAA_C02_10_01.png"/>
+
+A. 온디맨드 인스턴스 : 
+- 장기 약정이 없다<br/>
+- 중단되어서는 안되는 어플리케이션 적합하다<br/>
+- Amazon EC2에서 처음으로 개발 또는 시험 중인 어플리케이션<br/>
+
+B. 예약 인스턴스 : 
+- 1-3년 장기 약정이 있다<br/>
+- 안정적인 수요를 가진 어플리케이션에 적합하다<br/>
+
+C. 스팟 인스턴스 : 
+- 스팟가격이 최대입찰가격보다 적을시, 인스턴스가 실행되며, 스팟가격이 최대입찰가격보다 높을시, 인스턴스가 종료된다(Spot instance interruption)<br/>
+- 따라서, 중단될 수 있는 어플리케이션에 적합하다<br/>
+
+<img src="/assets/images/AWS/SAA_C02_10_02.png"/>
