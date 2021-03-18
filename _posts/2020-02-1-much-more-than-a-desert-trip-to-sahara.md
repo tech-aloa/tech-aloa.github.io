@@ -48,30 +48,31 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 
 <img src="/assets/images/AWS/SAA_C02_07.PNG"/>
+<hr>
 <img src="/assets/images/AWS/SAA_C02_08.PNG"/>
 
-- Keyword : SSE-S3, SSE-KMS, SSE-C
-
 정답은 <span class="spoiler">C,D 입니다.</span>
+
+- Keyword : SSE-S3, SSE-KMS, SSE-C
 
 - Server-side encryption with Amazon S3-Managed Keys(SSE-S3)
 
 S3가 제공하는 Unique Key 사용하여 암호화할 수 있도록 해준다. 이 키는 마스터 키에의해 주기적으로 암호화되면서 변경된다.
 
 <img src="/assets/images/AWS/SAA_C02_08_01.png"/>
-
+<hr>
 - Server-side encryption with Customer Master Keys(CMKs) Stored in AWS Key Management Service(SSE-KMS)  
 
 KMS가 관리하는 CMK를 사용하여 암호화할 수 있도록 해준다. 
 
 <img src="/assets/images/AWS/SAA_C02_08_02.png"/>
-
+<hr>
 - Server-side encryption with Customer-Provided Encryption Keys(SSE-C)  
 
 당신이 가진 암호화 방식으로 암호화할 수 있도록 해준다. 
 
 <img src="/assets/images/AWS/SAA_C02_08_03.png"/>
-
+<hr>
 
 <img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
 
