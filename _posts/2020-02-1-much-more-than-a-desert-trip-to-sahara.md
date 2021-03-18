@@ -29,7 +29,7 @@ B: Volume Gateway (cached mode) -> 캐시모드에서 주 데이터는 S3에 저
 C: AWS DataSync ->온프레미스와 AWS 스토리지간 데이터 이동을 지원하는 서비스입니다.<br/>
 D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전체 데이터 셋에 대한 낮은 지연시간을 제공합니다. 이는 비동기적으로 AWS에 백업됩니다. <br/>
 
-<img src="/assets/images/AWS/SAA_C02_04.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_04.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
@@ -38,19 +38,19 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 - Public subnet : Internet Gateway / ELB / Public IP, Elastic IP / Net Instance
 - Private subnet : private ip / internet inbound, outbound x / connection w/ other subnets
 
-<img src="/assets/images/AWS/SAA_C02_05.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_05.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
 
-<img src="/assets/images/AWS/SAA_C02_06.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_06.PNG"/>
 
 
 
-<img src="/assets/images/AWS/SAA_C02_07.PNG"/>
-<img src="/assets/images/AWS/SAA_C02_08.PNG"/>
-<img src="/assets/images/AWS/SAA_C02_09.PNG"/>
-<img src="/assets/images/AWS/SAA_C02_10.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_07.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_08.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
+<img class="question" src="/assets/images/AWS/SAA_C02_10.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
