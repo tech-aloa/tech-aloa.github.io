@@ -50,6 +50,33 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 <img class="question" src="/assets/images/AWS/SAA_C02_07.PNG"/>
 <img class="question" src="/assets/images/AWS/SAA_C02_08.PNG"/>
 <img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
+정답은 <span class="spoiler">A,B 입니다.</span>
+
+<table>
+
+<th>
+	<td>-</td>
+	<td>S3 Glacier Deep Archive</td>
+	<td>S3 Glacier</td>
+	<td>S3 Standard IA</td>
+	<td>S3 Standard</td>
+</th>
+<tr>
+	<td>-</td>
+	<td>GB당 0.00099 USD</td>
+	<td>GB당 0.004 USD</td>
+	<td>GB당 0.0125 USD</td>
+	<td>자주 액세스하는 데이터</td>
+</tr>
+<tr>
+	<td>-</td>
+	<td>GB당 0.00099 USD</td>
+	<td>GB당 0.004 USD</td>
+	<td>GB당 0.0125 USD</td>
+	<td>GB당 0.021 USD</td>
+</tr>
+</table>
+
 <img class="question" src="/assets/images/AWS/SAA_C02_10.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
