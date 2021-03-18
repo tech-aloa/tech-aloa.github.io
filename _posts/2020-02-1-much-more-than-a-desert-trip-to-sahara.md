@@ -52,28 +52,37 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 <img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
 정답은 <span class="spoiler">A,B 입니다.</span>
 
-<table>
+<table class="table table-bordered">
 
-<th>
-	<td>-</td>
-	<td>S3 Glacier Deep Archive</td>
-	<td>S3 Glacier</td>
-	<td>S3 Standard IA</td>
-	<td>S3 Standard</td>
-</th>
+<thead>
+	<tr>
+	<th scope="col">-</th>
+	<th scope="col">S3 Glacier Deep Archive</th>
+	<th scope="col">S3 Glacier</th>
+	<th scope="col">S3 Standard IA</th>
+	<th scope="col">S3 Standard</th>
+	</tr>
+</thead>
 <tr>
-	<td>-</td>
-	<td>GB당 0.00099 USD</td>
-	<td>GB당 0.004 USD</td>
-	<td>GB당 0.0125 USD</td>
+	<th scope="row">Puepose</th>
+	<td>12시간의 기본 검색 시간으로 거의 액세스하지 않는 데이터 아카이빙</td>
+	<td>분에서 시간 단위로 검색 시간을 지원하는 장기간 데이터 보관</td>
+	<td>수명이 길고 자주 액세스하지 않는 데이터</td>
 	<td>자주 액세스하는 데이터</td>
 </tr>
 <tr>
-	<td>-</td>
+	<th scope="row">Storage Price/month</th>
 	<td>GB당 0.00099 USD</td>
 	<td>GB당 0.004 USD</td>
 	<td>GB당 0.0125 USD</td>
 	<td>GB당 0.021 USD</td>
+</tr>
+<tr>
+	<th scope="row">Retrieval Price(PUT, COPY, POST, LIST 요청  1,000개당)</th>
+	<td>0.005 USD</td>
+	<td>0.01 USD</td>
+	<td>0.03 USD</td>
+	<td>0.05 USD</td>
 </tr>
 </table>
 
