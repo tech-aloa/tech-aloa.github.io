@@ -1,6 +1,11 @@
 ---
 ---
-@import "main";
+@import "bootstrap/functions";
+@import 'bootstrap/variables';
+@import "bootstrap/mixins";
+@import 'bootstrap/bootstrap';
+@import 'stars';
+
 
 .question{
 	border: 1px solid;
