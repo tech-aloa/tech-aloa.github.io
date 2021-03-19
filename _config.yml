@@ -2,7 +2,7 @@
 name: "Memoirs"
 title: "Memoirs"
 description: "I will take you on the fabulous world of exploration. Travel, culture, lifestyle. Eat, Pray, Love!"
-logo: 'assets/images/aloa.png'
+logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: 'https://tech-aloa.github.io'
 google_analytics: 'UA-xxxxxxxx-1'

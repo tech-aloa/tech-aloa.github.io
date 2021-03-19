@@ -10,7 +10,8 @@ image: assets/images/16.jpg
 
 정답은 <span class="spoiler">A 입니다.</span>
 
-Application Load Balancer의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
+- Keyword : Application Load Balancer
+의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
 
 <img src="/assets/images/AWS/SAA_C02_02.PNG"/>
 
@@ -48,6 +49,12 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 
 <img src="/assets/images/AWS/SAA_C02_07.PNG"/>
+
+정답은 <span class="spoiler">C,D 입니다.</span>
+
+- Keyword : <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/MultipleIP.html">Multiple IP Addresses</a>
+
+
 <hr>
 <img src="/assets/images/AWS/SAA_C02_08.PNG"/>
 
