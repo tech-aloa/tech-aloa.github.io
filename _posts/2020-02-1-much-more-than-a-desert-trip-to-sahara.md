@@ -31,20 +31,21 @@ HTTP/HTTPS/Websocket 프로트콜은 ALB 이며, TCP 프로토콜은 NLB입니�
 
 <img class="center" src="/assets/images/AWS/SAA_C02_02_01.png"/>
 
-AWS SQS(Simple Queue Service)의 Consumer는 Queue로부터 short polling 또는 Long polling으로 메시지를 가져올 수 있다. Short polling 일 경우, SQS는 빈 응답(Empty Response)라도 즉시 응답을 한다. Short polling 일 경우, SQS는 메시지가 있을 때만, 응답을 주무로, 더 저렴한 방식이다. 본 문제에서는 빈 응답수를 최소화하여 비용을 줄이고자하므로, Long polling으로 바꾸어야 한다. Long polling의 변경은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 0 이상으로 설정함으로써, 적용할 수 있다. 
+AWS SQS(Simple Queue Service)의 Consumer는 Queue로부터 short polling 또는 Long polling으로 메시지를 가져올 수 있습니다. Short polling 일 경우, SQS는 빈 응답(Empty Response)라도 즉시 응답을 합니다. Short polling 일 경우, SQS는 메시지가 있을 때만, 응답을 주무로, 더 저렴한 방식입니다. 본 문제에서는 빈 응답수를 최소화하여 비용을 줄이고자하므로, Long polling으로 바꾸어야 합니다. Long polling의 변경은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 0 이상으로 설정함으로써, 적용할 수 있습니다. 
 <hr>
 <img src="/assets/images/AWS/SAA_C02_03.PNG"/>
 
 정답은 <span class="spoiler">B 입니다.</span>
 
-- Keyword : Short polling, Long polling
+- Keyword : Volume Gateway
 
-AWS Storage Gateway는 클라우드 스토리지에 데이터를 안전하게 저장하면서도 잦은 접근이 필요한 데이터는 온프레미스에 캐싱하여 짧은 지연시간을 제공합니다. 본 문제에서 CTO 는 낮은 지연시간을 원하므로 Storage Gateway를 고려할 수 있고, 하드웨어 비용을 절감하고자 하므로 cache mode를 고려할 수 있습니다.
+Volume Gateway에서 Stored mode는 온프레미스 저장소의 전체 데이터를 저장하므로 낮은 지연시간을 제공하며, 볼륨 변경시마다 S3에 EBS(Elastic Block Store) 스냅샷이 보관되어 지속성을 높일 수 있습니다. 반면, Cached mode는 온프레미스 저장소를 확장할 필요없이, 클라우드 저장소의 저장공간을 사용할 수 있습니다. 즉, 볼륨에 쓴 데이터를 S3에 저장되며, 최근에 읽은 데이터를 온프레미스 저장소에 캐싱합니다.
 
-A: AWS Transfer ->S3에 파일을 전송하기 위한 SFT, FTP등의 파일 송수신 서비스입니다.<br/>
-B: Volume Gateway (cached mode) -> 캐시모드에서 주 데이터는 S3에 저장되며, 빈번하게 접근되는 데이터는 로컬 캐쉬에 저장됩니다. <br/>
-C: AWS DataSync ->온프레미스와 AWS 스토리지간 데이터 이동을 지원하는 서비스입니다.<br/>
-D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전체 데이터 셋에 대한 낮은 지연시간을 제공합니다. 이는 비동기적으로 AWS에 백업됩니다. <br/>
+<img class="center" src="/assets/images/AWS/SAA_C02_03_01.png"/>
+
+A) AWS Transfer : S3 저장소에 파일을 전송하기 위한 SFT, FTP등의 파일 송수신 서비스입니다.<br/>
+C) AWS DataSync  : 온프레미스와 AWS 스토리지간 데이터 이동을 지원하는 서비스입니다.<br/>
+
 <hr>
 <img class="question" src="/assets/images/AWS/SAA_C02_04.PNG"/>
 
