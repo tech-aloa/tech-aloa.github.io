@@ -12,19 +12,32 @@ image: assets/images/16.jpg
 
 - Keyword : Application Load Balancer
 
-<img src="/assets/images/AWS/SAA_C02_01_01.png"/>
+<img class="center" src="/assets/images/AWS/SAA_C02_01_01.png"/>
 
-의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
+ALB는 인스턴스들의 상태를 확인하기 위해 지정된 프로토콜및 포트로 Target Group에게 주기적 요청을 보냅니다. Health Check를 통과하여 장애가 없는 타겟에만 트래픽을 보내며, 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
+
+트래픽별 다른 Target Group에게 요청을 보낼 수 있습니다(Rule). 
+
+HTTP/HTTPS/Websocket 프로트콜은 ALB 이며, TCP 프로토콜은 NLB입니다. NLB는 매우 낮은 지연시간을 가지고 있으므로 extreme performance가 필요한 어플리케이션에 적합합니다. 
+
+또한, 인스턴스는 클라이언트의 주소를 직접알 수 없으며, ELB의 프라이빗 아이피를 압니다. 클라이언트 주소는 헤더 (X-Forwarded-For)에 입력되어 있습니다. 
+
 <hr>
 <img src="/assets/images/AWS/SAA_C02_02.PNG"/>
 
 정답은 <span class="spoiler">D 입니다.</span>
 
-SQS는 큐로부터 메시지를 가져오는 방식에 있어서, short polling과 long polling을 제공한다. short polling은 빈 대기열이라도 즉시 응답을 하며, long polling은 메시지가 있을 때만 응답을 하므로 더 저렴한 방식이다. 본 문제에서는 빈 응답수(empty receives)를 최소화하여 비용을 줄이고자하므로, long polling으로 바꾸어야 한다. long polling은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 늘림으로써 적용할 수 있다. 
+- Keyword : <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-short-and-long-polling.html">Short polling, Long polling</a>
+
+<img class="center" src="/assets/images/AWS/SAA_C02_02_01.png"/>
+
+AWS SQS(Simple Queue Service)의 Consumer는 Queue로부터 short polling 또는 Long polling으로 메시지를 가져올 수 있다. Short polling 일 경우, SQS는 빈 응답(Empty Response)라도 즉시 응답을 한다. Short polling 일 경우, SQS는 메시지가 있을 때만, 응답을 주무로, 더 저렴한 방식이다. 본 문제에서는 빈 응답수를 최소화하여 비용을 줄이고자하므로, Long polling으로 바꾸어야 한다. Long polling의 변경은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 0 이상으로 설정함으로써, 적용할 수 있다. 
 <hr>
 <img src="/assets/images/AWS/SAA_C02_03.PNG"/>
 
 정답은 <span class="spoiler">B 입니다.</span>
+
+- Keyword : Short polling, Long polling
 
 AWS Storage Gateway는 클라우드 스토리지에 데이터를 안전하게 저장하면서도 잦은 접근이 필요한 데이터는 온프레미스에 캐싱하여 짧은 지연시간을 제공합니다. 본 문제에서 CTO 는 낮은 지연시간을 원하므로 Storage Gateway를 고려할 수 있고, 하드웨어 비용을 절감하고자 하므로 cache mode를 고려할 수 있습니다.
 
