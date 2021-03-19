@@ -51,16 +51,21 @@ C) AWS DataSync  : 온프레미스와 AWS 스토리지간 데이터 이동을 �
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
-일반적인 예로 VPC 내의 퍼블릭 서브넷에는 웹서버를 두고 프라이빗 서브넷에는 DB서버를 두는 웹사이트가 있습니다. 퍼블릿 서브넷의 인스턴스는 인터넷에 아웃바운드 트래픽(인터넷->인스턴스)을 전송할 수 있지만, 프라이빗 서브넷은 인터넷과 연결이 되있지 않습니다. 하지만, 프라이빗 서브넷의 인바운드는 필요가 없더라도 인스턴스의 펌웨어 혹은 주기적인 업데이트로 인해 아웃바운드 트래픽이 허용되어야 할 경우가 있습니다. 본 문제는 니와 같이 프라이빗 서브넷 안에 있는 인스턴스의 소프트웨어 패치가 필요한 상황입니다. 이런 경우, 퍼블릭 서브넷에서 NAT(Network Address Translation)게이트웨이를 생성한 후, 프라이빗 네트워크의 라우팅 테이블 업데이트 하여 패치를 가져올 수 있습니다. 
+- Keyword : NAT(Network Address Translation) Gateway
+
+일반적인 예로 VPC 내의 퍼블릭 서브넷에는 웹서버를 두고 프라이빗 서브넷에는 DB서버를 두는 웹사이트가 있습니다. 퍼블릿 서브넷의 인스턴스는 인터넷에 아웃바운드 트래픽(인터넷->인스턴스)을 전송할 수 있지만, 프라이빗 서브넷은 인터넷과 연결이 되있지 않습니다. 하지만, 프라이빗 서브넷의 인바운드는 필요가 없더라도 인스턴스의 펌웨어 혹은 주기적인 업데이트로 인해 아웃바운드 트래픽이 허용되어야 할 경우가 있습니다. 본 문제는 니와 같이 프라이빗 서브넷 안에 있는 인스턴스의 소프트웨어 패치가 필요한 상황입니다. 이런 경우, 퍼블릭 서브넷에서 NAT게이트웨이를 생성한 후, 프라이빗 네트워크의 라우팅 테이블 업데이트 하여 패치를 가져올 수 있습니다. 
 
 - Public subnet : Internet Gateway / ELB / Public IP, Elastic IP / Net Instance
 - Private subnet : private ip / internet inbound, outbound x / connection w/ other subnets
-
+<hr>
 <img class="question" src="/assets/images/AWS/SAA_C02_05.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
-<hr>
+- Keyword : <a href ="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance Hibernation</a>
+
+Instance Hibernation(최대절전모드 또는 수면모드)는 루트 볼륨이 EBS일 경우일 때만 가능합니다(인스턴스 스토어 x). 수면모드를 설정하면 램이 EBS 루트 볼륨에 저장되면서, 나중에 다시 실행될 때, 복구가 됩니다. 인스턴스는 중지된 상태로 비용이 청구가 안되고, EBS 와 Elastic IP 에 비용이 청구되므로 효율적 운영이 가능합니다. 사례는 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">이 글</a>에서 볼수 있습니다.
+
 <img src="/assets/images/AWS/SAA_C02_06.PNG"/>
 
 정답은 <span class="spoiler">C,D 입니다.</span>
@@ -87,8 +92,7 @@ EC2의 Public 는 인스턴스의 시작 및 종료와 함께 변화된다. 하�
 
 정답은 <span class="spoiler">C,D 입니다.</span>
 
-- Keyword : <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/MultipleIP.html">Multiple IP Addresses</a>
-
+- Keyword : CORS
 
 <hr>
 <img src="/assets/images/AWS/SAA_C02_08.PNG"/>
@@ -118,7 +122,7 @@ KMS가 관리하는 CMK를 사용하여 암호화할 수 있도록 해준다.
 
 <img class="question" src="/assets/images/AWS/SAA_C02_09.PNG"/>
 
-정답은 <span class="spoiler">A,B 입니다.</span>
+정답은 <span class="spoiler">A 입니다.</span>
 
 <table class="table table-bordered">
 
@@ -133,7 +137,7 @@ KMS가 관리하는 CMK를 사용하여 암호화할 수 있도록 해준다.
 </thead>
 <tr>
 	<th scope="row">Puepose</th>
-	<td>12시간의 기본 검색 시간으로 거의 액세스하지 않는 데이터 아카이빙</td>
+	<td>거의 액세스하지 않는 데이터 아카이빙</td>
 	<td>분에서 시간 단위로 검색 시간을 지원하는 장기간 데이터 보관</td>
 	<td>수명이 길고 자주 액세스하지 않는 데이터</td>
 	<td>자주 액세스하는 데이터</td>
@@ -153,11 +157,12 @@ KMS가 관리하는 CMK를 사용하여 암호화할 수 있도록 해준다.
 	<td>0.05 USD</td>
 </tr>
 </table>
-
+<hr>
 <img src="/assets/images/AWS/SAA_C02_10.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
+- Keyword : Spot Instance
 <img class="center" src="/assets/images/AWS/SAA_C02_10_01.png"/>
 
 A. 온디맨드 인스턴스 : 
@@ -174,3 +179,5 @@ C. 스팟 인스턴스 :
 - 따라서, 중단될 수 있는 어플리케이션에 적합하다<br/>
 
 <img src="/assets/images/AWS/SAA_C02_10_02.png"/>
+
+<hr>
