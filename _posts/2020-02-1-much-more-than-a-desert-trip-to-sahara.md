@@ -11,14 +11,17 @@ image: assets/images/16.jpg
 정답은 <span class="spoiler">A 입니다.</span>
 
 - Keyword : Application Load Balancer
-의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
 
+<img src="/assets/images/AWS/SAA_C02_01_01.png"/>
+
+의 Health Check에 대한 문제입니다. ALB(listener)는 인스턴스들의 상태를 확인하기 위해 당신이 지정해놓은 프로토콜과 포트로 주기적으로 target group에게 요청을 보냅니다. 그리고, 트래픽을 오직 장애가 없는 타겟에만 보냅니다. 당신은 트래픽 내용별 다른 target group에게 request를 보내라는 rule을 리스너에 지정할 수 있습니다. 만약에 장애가 발생한 타겟이 있다면, 해당 인스턴스에는 요청을 보내는 것을 중지합니다.
+<hr>
 <img src="/assets/images/AWS/SAA_C02_02.PNG"/>
 
 정답은 <span class="spoiler">D 입니다.</span>
 
 SQS는 큐로부터 메시지를 가져오는 방식에 있어서, short polling과 long polling을 제공한다. short polling은 빈 대기열이라도 즉시 응답을 하며, long polling은 메시지가 있을 때만 응답을 하므로 더 저렴한 방식이다. 본 문제에서는 빈 응답수(empty receives)를 최소화하여 비용을 줄이고자하므로, long polling으로 바꾸어야 한다. long polling은 ReceiveMessageWaitTimeSeconds(수신메시지 대기 시간)을 늘림으로써 적용할 수 있다. 
-
+<hr>
 <img src="/assets/images/AWS/SAA_C02_03.PNG"/>
 
 정답은 <span class="spoiler">B 입니다.</span>
@@ -29,7 +32,7 @@ A: AWS Transfer ->S3에 파일을 전송하기 위한 SFT, FTP등의 파일 송�
 B: Volume Gateway (cached mode) -> 캐시모드에서 주 데이터는 S3에 저장되며, 빈번하게 접근되는 데이터는 로컬 캐쉬에 저장됩니다. <br/>
 C: AWS DataSync ->온프레미스와 AWS 스토리지간 데이터 이동을 지원하는 서비스입니다.<br/>
 D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전체 데이터 셋에 대한 낮은 지연시간을 제공합니다. 이는 비동기적으로 AWS에 백업됩니다. <br/>
-
+<hr>
 <img class="question" src="/assets/images/AWS/SAA_C02_04.PNG"/>
 
 정답은 <span class="spoiler">A,B 입니다.</span>
@@ -43,10 +46,28 @@ D: Volume Gateway (stored mode) -> 주 데이터는 로컬에 저장되며, 전�
 
 정답은 <span class="spoiler">A,B 입니다.</span>
 
+<hr>
+<img src="/assets/images/AWS/SAA_C02_06.PNG"/>
 
-<img class="question" src="/assets/images/AWS/SAA_C02_06.PNG"/>
+정답은 <span class="spoiler">C,D 입니다.</span>
 
+- Keyword : <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/MultipleIP.html">Multiple IP Addresses</a>, 
 
+- Multiple IP Addresses
+
+Multiple IP Addresses 는 하나의 인스턴스로 들어오는 트래픽의 앱이 가용하지 않을 경우, 보조 ENI를 두어 대기중인 인스턴스로 가도록 할 수 있다. 
+
+<img src="/assets/images/AWS/SAA_C06_01.png"/>
+
+그 외에, 네트워크를 분리하여 한 서버의 여러개의 웹사이트를 운영하기 또는 방화벽, 로드 발란서 등 각 네트워크 마다 다중 아이피를 갖는 네트워크 어플라이언스에 사용될 수 있다. 
+
+하지만, <a href="https://stackoverflow.com/questions/36608349/aws-elastic-ip-vs-eni">본 글</a>에 따르면 높은 가용성을 얻기 위해 ENI말고도 ELB 사용, Elastic IP사용들을 검토할 수 있다. 
+
+EC2의 Public 는 인스턴스의 시작 및 종료와 함께 변화된다. 하지만, fixed public IP 를 사용하고 싶을 때, Elastic IP 를 사용할 수 있다. 따라서, 해당 인스턴스에 장애 발생 시, 다른 인스턴스로 신속히 매핑이 가능하다.
+
+하지만, Elastic IP 와 ENI 방식은 하나의 인스턴스가 모든 트래픽을 받으므로, 가장 추천하는 방식은 ELB 방식이다.
+
+<hr>
 
 <img src="/assets/images/AWS/SAA_C02_07.PNG"/>
 
