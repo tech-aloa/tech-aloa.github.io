@@ -1,15 +1,20 @@
 @font-face {
   font-family: 'hongmin';
 
-  src: url("../fonts/hongchwang/THE_HongChawangjanemo.ttf?srf3rx") format("truetype"), 
+  src: 
+  url("../fonts/hongchwang/THE_HongChawangjanemo.ttf?srf3rx") format("truetype"), 
   url("../fonts/hongchwang/THE_HongChawangjanemo.eot?srf3rx") format('embedded-opentype'),
-  url("../fonts/icomoon/THE_HongChawangjanemo.woff?srf3rx") format("woff"), 
-/*  url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), 
-  url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), 
-  url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");*/
+  url("../fonts/icomoon/THE_HongChawangjanemo.woff?srf3rx") format("woff");
+
   font-weight: normal;
   font-style: normal;
 }
+
+/*  src:url('../fonts/icomoon/icomoon.eot?srf3rx');
+  src:url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');*/
 /* =======================================================
 *
 * 	Template Style 
