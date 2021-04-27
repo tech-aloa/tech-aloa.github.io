@@ -887,6 +887,7 @@ form label {
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
+  border-radius: 4px !important;
   padding: 15px 20px;
   background: #fff !important;
   color: #F14E95;
@@ -950,9 +951,8 @@ form label {
 .simply-countdown > .simply-section {
   /* coutndown blocks */
   display: inline-block;
-  width: 100px;
+
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -975,23 +975,19 @@ form label {
 }
 .simply-countdown > .simply-section > div {
   /* countdown block inner div */
-  display: table-cell;
   vertical-align: middle;
   height: 100px;
-  width: 100px;
 }
 
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
   display: block;
-  color: white;
+  color: black;
+  font-family: 'hongmin';
   /* amounts and words */
 }
 
-.simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
-  /* amounts */
-}
+
 
 .simply-countdown > .simply-section .simply-word {
   color: rgba(255, 255, 255, 0.7);
