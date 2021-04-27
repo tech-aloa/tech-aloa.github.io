@@ -112,7 +112,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>민예 &amp; 홍근</h1>
+							<h1>홍근 &amp; 민예</h1>
 							<h2>결혼합니다</h2>
 
 							<div class="col-md-8 col-md-offset-2 col-sm-4 col-sm-offset-4 simply-countdown simply-countdown-one">
@@ -120,7 +120,7 @@
 									<div>
 										<button type="submit" class="btn btn-default btn-block">
 											<span class="simply-amount">
-												<h3  class="hongmin_btn">2021년 6월 26일 </br>토요일 2시</h3>
+												<h3  class="hongmin_btn">2021년 6월 26일 </br>토요일 오후 2시</h3>
 											</span>
 										</button>
 									</div>
@@ -137,7 +137,9 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>결혼식에 초대합니다!</h2>
-					<h3>2021년 6월 26일 토요일 2시</h3>
+					<h3>2021년 6월 26일 토요일 오후 2시 </br>
+						사직동교회 3층 대예배실
+					</h3>
 					<p>저희 두 사람이 사랑으로 만나</br>
 					이제 믿음과 화목으로 한 울타리를 만들고</br>
 					그속에서 행복한 가정을 이루고자 하오니</br>
@@ -360,43 +362,19 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Our Special Events</span>
-					<h2>Wedding Events</h2>
+					<h2>오시는 길</h2>
+					<h3>부산 동래구 사직북로 34번길 59</br>
+						사직동교회 3층 대예배실
+					</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
 						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
+							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Main Ceremony</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>4:00 PM</span>
-										<span>6:00 PM</span>
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
-									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Wedding Party</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>7:00 PM</span>
-										<span>12:00 AM</span>
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
-									</div>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<div id="map"></div>
 								</div>
 							</div>
 						</div>
@@ -405,6 +383,14 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=kL1Q8MUpGFrisqxyUYOxfLoLl5DQmctVaW1PHjjT"></script>
+	<script>
+		var mapOptions = {
+			center: new naver.maps.LatLng(37.3595704, 127.105399),
+			zoom : 10
+		}
+		var map = new naver.maps.Map('map', mapOptions);
+	</script>
 
 	<div id="fh5co-testimonial">
 		<div class="container">
