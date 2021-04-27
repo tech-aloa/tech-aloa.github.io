@@ -11,6 +11,7 @@ $brand-primary: #F14E95 !default;
 $brand-secondary: #118DF0 !default; 
 
 $brand-white: #fff;
+$brand-yellow: #fdcf76;
 $brand-black: #000;
 $brand-darker: #444;
 $brand-gray: #ccc;
@@ -893,7 +894,8 @@ form {
 		}
 		.btn {
 			padding: 15px 20px;
-			background: $brand-white!important;
+			border-radius: 0px !important;
+			background: $brand-yellow!important;
 			color: $brand-primary;
 			border: none!important;
 			font-size: 14px;
@@ -957,9 +959,9 @@ form {
 .simply-countdown > .simply-section {
     /* coutndown blocks */
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    background: rgba($brand-primary,.8);
+    /* width: 100px;
+    height: 100px; 
+    background: rgba($brand-primary,.8); */
     margin: 0 4px;
     @include border-radius(50%);
     position: relative;
@@ -974,11 +976,11 @@ form {
 }
 
 .simply-countdown > .simply-section > div {
-    /* countdown block inner div */
+    /* countdown block inner div 
     display: table-cell;
     vertical-align: middle;
     height: 100px;
-    width: 100px;
+    width: 100px;*/
 }
 
 .simply-countdown > .simply-section .simply-amount,
@@ -989,15 +991,16 @@ form {
 }
 
 .simply-countdown > .simply-section .simply-amount {
-	font-size: 30px;
-    /* amounts */
+	/* font-size: 30px;
+     amounts */
 }
 
 .simply-countdown > .simply-section .simply-word {
+	/*
 	color: rgba($brand-white,.7);
 	text-transform: uppercase;
 	font-size: 12px;
-    /* words */
+     words */
 }
 
 #fh5co-testimonial,
