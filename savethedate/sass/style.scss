@@ -960,9 +960,6 @@ form {
 .simply-countdown > .simply-section {
     /* coutndown blocks */
     display: inline-block;
-    /* width: 100px;
-    height: 100px; 
-    background: rgba($brand-primary,.8); */
     margin: 0 4px;
     @include border-radius(50%);
     position: relative;
@@ -977,24 +974,20 @@ form {
 }
 
 .simply-countdown > .simply-section > div {
-    /* countdown block inner div 
-    display: table-cell;
+
     vertical-align: middle;
     height: 100px;
-    width: 100px;*/
+ 
 }
 
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
 	display: block;
-	color: rgba($brand-white,1);
-    /* amounts and words */
+	color: rgba($brand-black,1);
+    font-family : 'hongmin';
 }
 
-.simply-countdown > .simply-section .simply-amount {
-	/* font-size: 30px;
-     amounts */
-}
+
 
 .simply-countdown > .simply-section .simply-word {
 	/*
