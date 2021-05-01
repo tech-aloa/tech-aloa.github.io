@@ -148,58 +148,49 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .map_container{
-  margin-bottom: 3em !important;
+  margin-bottom: 1em !important;
 }
 
 img.gallery{
-  width:100%;
-  height:100%;
+/*  width:100%;
+  height:100%;*/
+  min-height: 400px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  display: block;
 }
 
-.bride_msg{
-  font-family:'MapoFlowerIsland';
-  font-weight: 600;
-}
-
-.bride_parents{
-  font-family:'MapoFlowerIsland';
-  font-weight: 600;
-}
-
-.groom_msg{
-  font-family:'ROKABold';
-  font-weight: 600;
-}
-
-.groom_parents{
-  font-family:'ROKABold';
-  font-weight: 600;
-}
-
-.msg{
-  font-size:1.8em;
-  margin-top: .5em;
-
-}
-
-
-.payment{
-    display: block;
-    text-align: center;
-    width: 260px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom:2em;
+h3.location{
+  text-align: center;
 }
 
 .google-form-container{
-  display: table;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top:850px;
+}
+
+
+.google-form{
+/*  display: table;
+  margin: 0 auto;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
     padding: 20px 0;
   }
+
+
 }
 .fh5co-nav #fh5co-logo {
   font-size: 40px;
@@ -219,75 +210,9 @@ img.gallery{
   font-family: 'hongmin';
 }
 
-.card{
-    padding:1.8em 1em;
-    text-align:center;
-    line-height: 1.9em;
 
-}
 
-#content {
-    width: 260px;
-    margin: 0 auto;
-    background: #fff;
-    height: 340px; /* for demo */
-    -moz-box-shadow: 0 1px 5px #ccc;
-    -webkit-box-shadow: 0 1px 5px #ccc;
-    box-shadow: 0 1px 5px #ccc;
-    color:#444;
-    z-index: 0;
-}
 
-.closed {
-    z-index: 1;
- width:260px;
-  overflow: hidden;  
-     margin: 0 auto;
-    height:80px;
-    margin-bottom: -5px;
-    
-}
-
-.closed .mid{
-    /*background: #fff;*/
-    width: 160px;
-    margin: 0 auto;
-    margin-top: -70px;
-    height: 80px;
-    background-color: #fff;
-    -moz-box-shadow: 0 1px 5px #ccc;
-    -webkit-box-shadow: 0 1px 5px #ccc;
-    box-shadow: 0 1px 5px #ccc;
-    -webkit-border-radius: 12px;
-}
-
-.left, .right {
-    display:none;
-}
-
-.closed .right{
-    display: block;
-    width: 0;
-    height: 100px;
-    border-left: 60px solid #fff;
-    border-right: 1px solid #ccc;
-    margin-left: 184px;
-    -webkit-transform: rotate(39deg);
-    margin-top: -34px;
-    box-shadow: 1px -1px 1px #ccc;
-}
-
-.closed .left{
-    display: block;
-    width: 0;
-    height: 100px;
-    border-right: 60px solid #fff;
-    border-left: 1px solid #ccc;
-    margin-left: 16px;
-    -webkit-transform: rotate(-39deg);
-    margin-top: -100px;
-    box-shadow: -1px -1px 1px #ccc;
-}
 
 #fh5co-testimonial{
   background-repeat: no-repeat;
@@ -635,9 +560,16 @@ img.gallery{
   height: 600px;
 }
 @media screen and (max-width: 768px) {
+  .google-form-container{
+    padding-top:900px; /* 1:1 Aspect Ratio */
+  }
   #fh5co-counter {
     height: auto;
   }
+  .fh5co-logo{
+    font-size:25px;
+  }
+
 }
 
 .timeline {
@@ -656,6 +588,9 @@ img.gallery{
   margin-left: 0px;
 }
 @media screen and (max-width: 480px) {
+  .google-form-container{
+    padding-top:1000px; /* 1:1 Aspect Ratio */
+  }
   .timeline:before {
     margin-left: -64px;
   }
@@ -871,10 +806,6 @@ img.gallery{
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
   background: rgba(0, 0, 0, 0.2);
 }
 #fh5co-gallery-list li a:hover:before {
@@ -1007,7 +938,9 @@ img.gallery{
 form label {
   font-weight: normal !important;
 }
-
+#fh5co-header{
+  background-repeat: round;
+}
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
 .fh5co-cover .display-tc {
@@ -1762,7 +1695,7 @@ form label {
   outline: none;
 }
 
-.fh5co-nav-toggle {
+/*.fh5co-nav-toggle {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -1802,8 +1735,8 @@ form label {
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
   background: #fff;
-}
-
+}*/
+/*
 .fh5co-nav-toggle i::before {
   top: -7px;
 }
@@ -1840,9 +1773,9 @@ form label {
   -ms-transform: rotateZ(-45deg);
   -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
-}
+}*/
 
-.fh5co-nav-toggle {
+/*.fh5co-nav-toggle {
   position: absolute;
   right: 0px;
   top: 10px;
@@ -1855,7 +1788,7 @@ form label {
   width: 44px;
   z-index: 2001;
   border-bottom: none !important;
-}
+}*/
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
     display: block;
