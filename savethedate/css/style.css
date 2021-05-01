@@ -191,6 +191,11 @@ img.gallery{
     bottom: 0;
     margin-bottom:2em;
 }
+
+.google-form-container{
+  display: table;
+  margin: 0 auto;
+}
 @media screen and (max-width: 768px) {
   .fh5co-nav {
     padding: 20px 0;
