@@ -338,6 +338,13 @@
 
 
 @media screen and (max-width: 767px) {
+	#content {
+    	height: 210px; /* for demo */
+	}
+	.heart{
+		top: 6em;
+	}
+
 	.fh5co-nav #fh5co-logo{
 		font-size:28px;
 	}
@@ -424,6 +431,7 @@
 	.bride_msg{
 	  font-family:'MapoFlowerIsland';
 	  font-weight: 600;
+	  margin-top: 50px;
 	}
 
 	.bride_parents{

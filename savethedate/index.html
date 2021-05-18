@@ -58,6 +58,7 @@
 	<link rel="stylesheet" href="css/responsive.css">
 <!-- 	<link rel="stylesheet" href="css/jquery-sakura.css"> -->
 	<link rel="stylesheet" href="css/sakura.css">
+	<link href="css/lity.min.css" rel="stylesheet">
 	<!-- Modernizr JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -150,7 +151,8 @@
 			<div class="couple-wrap animate-box">
 				<div class="couple-half">
 					<div class="groom">
-						<img src="images/wedding/210513_BRT_0676.jpg" alt="groom" class="img-responsive">
+			<!-- 			<img src="images/wedding/210513_BRT_0676.jpg" alt="groom" class="img-responsive"> -->
+			<div style="background-image:url(images/wedding/210513_BRT_0676.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; width:150px; height:150px; border-radius:50%; background-color: #d0d4de;"></div>
 					</div>
 					<div class="desc-groom cute">
 						<h3>홍근</h3>
@@ -160,7 +162,8 @@
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
 				<div class="couple-half">
 					<div class="bride">
-						<img src="images/wedding/210513_BRT_0415.jpg" alt="groom" class="img-responsive">
+						<div style="background-image:url(images/wedding/210513_BRT_0415.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; width:150px; height:150px; border-radius:50%; background-color: #d0d4de;"></div>
+					<!-- 	<img src="" alt="groom" class="img-responsive"> -->
 					</div>
 					<div class="desc-bride cute">
 						<h3>민예</h3>
@@ -185,9 +188,9 @@
 					<div id="fh5co-gallery-list">
 						<div class="owl-carousel owl-theme">
 						    <div class="item"><img src="images/wedding/210513_BRT_0676.jpg"/></div>
-						    <div class="item"><img src="images/wedding/210513_BRT_1842.jpg"/></div>
-						    <div class="item"><img src="images/wedding/210513_BRT_0415.jpg"/></div>
 						    <div class="item"><img src="images/wedding/210513_BRT_1790.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_0415.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1842.jpg"/></div>
 						    <div class="item"><img src="images/wedding/210513_BRT_0279.jpg"/></div>
 						    <div class="item"><img src="images/wedding/KakaoTalk_20210517_234740027.jpg"/></div>
 						    
@@ -260,10 +263,20 @@
 				<!-- video -->
 					<div class="col-md-4"></div>
 			    	<div class="col-md-4">
+			    		<p style="text-align: center;">저희들의 이야기가 더 궁금하시다면, <br/> 아래 비디오 버튼을 클릭해주세요!</p>
+				<!-- 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pmz81eU3CYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 						<div class="fh5co-video fh5co-bg">
-							<a href="https://youtu.be/pmz81eU3CYM" class="popup-vimeo"><i class="icon-video2"></i></a>
+
+							<a href="https://www.youtube.com/embed/pmz81eU3CYM" data-lity>
+								<i class="icon-video2"></i>
+							</a>
 						
 						</div>
+
+	<!-- 					<video controls="true">
+					        <source src="https://www.youtube.com/embed/pmz81eU3CYM" type="video/mp4" />
+					    </video> -->
+
 					</div>
 					<div class="col-md-4"></div>
 				</div>
@@ -363,7 +376,7 @@
 				
 
 							<div class="card">
-								신랑에게, 
+								신랑에게,<br/> 
 
 							<div class="payment">
 								국민 012501-04-266011
@@ -374,12 +387,13 @@
 						
 						</div>
 					<!-- 	<p class="heart text-center"><i class="icon-heart2"></i></p> -->
+					<p class="heart text-center"><i class="icon-heart2" style="background:oldlace;"></i></p>
 						<div class="bride_msg">
 		
 
 							<div class="card">
 							
-							신부에게,  <!-- 예쁘게 살아♡ -->
+							신부에게,<br/>  <!-- 예쁘게 살아♡ -->
 
 							<div class="payment">
 								국민 012501-04-266011
@@ -582,6 +596,7 @@
 
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/lity.min.js"></script>
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
@@ -643,7 +658,7 @@
 	    var mapDiv = document.getElementById('map');
 		var mapOptions = {
 			center: new naver.maps.LatLng(35.20086819906466, 129.06245620480954),
-			zoom : 24
+			zoom : 20
 		}
 		var map = new naver.maps.Map('map', mapOptions);
 	});
