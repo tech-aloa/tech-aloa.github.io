@@ -175,6 +175,7 @@
 						<div class="overlay"></div>
 					</div>
 				</div> -->
+
 <div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
@@ -184,13 +185,28 @@
 			</div>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
+					<div id="fh5co-gallery-list">
+						<div class="owl-carousel owl-theme">
+						    <div class="item"><img src="images/wedding/210513_BRT_0676.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1790.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_0415.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1569.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_0279.jpg"/></div>
+						    <div class="item"><img src="images/wedding/KakaoTalk_20210517_234740027.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1625.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_0728.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1875.jpg"/></div>
+
+						</div>
+					</div>
+				</div>
+<!-- 
+				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
 
 					
 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/wedding/210513_BRT_0676.jpg); ">
-
-					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/wedding/210513_BRT_0676.jpg); "></li>
 
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/wedding/210513_BRT_1790.jpg); "> 
 
@@ -223,38 +239,9 @@
 						
 					</ul>	
 				</div>
-				<!-- <div class="col-md-4 col-sm-4">		
-					<img class="gallery" src="images/wedding/m7.PNG"/>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/v2.PNG"/>					
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/s1.PNG"/>
-				</div> -->
+ -->
 			</div>
-			<!-- <div class="row row-bottom-padded-md">
-				<div class="col-md-4 col-sm-4">		
-					<img class="gallery" src="images/wedding/t1.PNG"/>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/c2.PNG"/>					
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/t2.PNG"/>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-md">
-				<div class="col-md-4 col-sm-4">		
-					<img class="gallery" src="images/wedding/g1.PNG"/>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/m3.PNG"/>					
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<img class="gallery" src="images/wedding/v1.PNG"/>
-				</div>
-			</div> -->
+
 		</div>
 	</div>
 
@@ -525,8 +512,8 @@
 			</div>
 
 		</div>
-
-<!-- 		<div id="fh5co-gallery" class="fh5co-section-gray">
+<!-- 
+		<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -686,6 +673,24 @@
 	<script>
     var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
+	$('.owl-carousel').owlCarousel({
+			autoplay : true, 
+			autoplayTimeout: 2000, 
+			loop:true,
+			margin:10,
+			nav:false,
+			responsive:{
+			0:{
+			items:3, slideBy: 3
+			},
+			600:{
+			items:3, slideBy: 3
+			},
+			1000:{
+			items:3, slideBy: 3
+			}
+		}
+	});
     // default example
     // simplyCountdown('.simply-countdown-one', {
     //     year: d.getFullYear(),
