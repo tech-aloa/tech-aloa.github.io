@@ -411,6 +411,7 @@ h3.location{
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
+  background-position: center;
 }
 .fh5co-cover .overlay {
   z-index: 0;
