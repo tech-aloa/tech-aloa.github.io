@@ -37,11 +37,11 @@
 	}
 
 	.web_page{
-		display:none;
+		display:block;
 	}
 
 	.mobile_page{
-		display:block;
+		display:none;
 	}
 
 
