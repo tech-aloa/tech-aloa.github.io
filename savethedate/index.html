@@ -154,7 +154,7 @@
 					</div>
 					<div class="desc-groom cute">
 						<h3>홍근</h3>
-					<!-- 	<p >#멋있는 #탑탑!</p> -->
+					<!-- 	<p>천성 개발자, 현재는 LINE에서 </p> -->
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -164,19 +164,14 @@
 					</div>
 					<div class="desc-bride cute">
 						<h3>민예</h3>
-						<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p> -->
+						<p></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<!-- <div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
-						<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<div class="overlay"></div>
-					</div>
-				</div> -->
+
 
 <div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
@@ -190,9 +185,9 @@
 					<div id="fh5co-gallery-list">
 						<div class="owl-carousel owl-theme">
 						    <div class="item"><img src="images/wedding/210513_BRT_0676.jpg"/></div>
-						    <div class="item"><img src="images/wedding/210513_BRT_1790.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1842.jpg"/></div>
 						    <div class="item"><img src="images/wedding/210513_BRT_0415.jpg"/></div>
-						    <div class="item"><img src="images/wedding/210513_BRT_1569.jpg"/></div>
+						    <div class="item"><img src="images/wedding/210513_BRT_1790.jpg"/></div>
 						    <div class="item"><img src="images/wedding/210513_BRT_0279.jpg"/></div>
 						    <div class="item"><img src="images/wedding/KakaoTalk_20210517_234740027.jpg"/></div>
 						    
@@ -223,14 +218,14 @@
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline animate-box">
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/old_memory/1401703429272.jpeg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/old_memory/1401703429272.jpeg); background-size: contain; background-repeat: repeat; background-position: center;"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">처음 만난날</h3>
 									<span class="date">March 2, 2014</span>
 								</div>
 								<div class="timeline-body">
-									<p>대학교, 같은 컴공과 동아리(Ghost) 선·후배로 처음 만났습니다.</p>
+									<p>대학교, 같은 컴공과 동아리 선·후배로 처음 만났습니다.</p>
 								</div>
 							</div>
 						</li>
@@ -242,7 +237,7 @@
 									<span class="date">April 8, 2014</span>
 								</div>
 								<div class="timeline-body">
-									<p>포항 밤바다를 보러가는 날, 23살, 26살의 연애를 시작하였습니다.</p>
+									<p>23살, 26살의 연애를 시작하였습니다.</p>
 								</div>
 							</div>
 						</li>
@@ -259,6 +254,18 @@
 							</div>
 						</li>
 			    	</ul>
+			    	
+				</div>
+				<div class="row animate-box">
+				<!-- video -->
+					<div class="col-md-4"></div>
+			    	<div class="col-md-4">
+						<div class="fh5co-video fh5co-bg">
+							<a href="images/wedding/wedding_story.mp4" class="popup-vimeo"><i class="icon-video2"></i></a>
+						
+						</div>
+					</div>
+					<div class="col-md-4"></div>
 				</div>
 			</div>
 		</div>
@@ -320,7 +327,7 @@
 								
 							
 							</div>
-							<p class="heart text-center"><i class="icon-heart2"></i></p>
+							<p class="heart text-center"><i class="icon-heart2" style="background:oldlace;"></i></p>
 							<div class="col-xs-6 card_tablet bride_msg">
 			
 
@@ -409,19 +416,7 @@
 					
 		</div>
 	</div>
-	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=1ryqkj5xsd"></script>
-	<script>
 
-	$(window).load(function () {
-	    var mapDiv = document.getElementById('map');
-		var mapOptions = {
-			center: new naver.maps.LatLng(35.20086819906466, 129.06245620480954),
-			zoom : 7
-		}
-		var map = new naver.maps.Map(mapDiv, mapOptions);
-	});
-
-	</script>
 	
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -595,7 +590,7 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=1ryqkj5xsd"></script>
 	<script>
 	//$(window).load(function () {
 	//    $('div#fh5co-couple').sakura();
@@ -637,13 +632,21 @@
 
        if (loadCounter === 2) {
 
-           $("#oc-contact").attr("min-height", "300px");
-
+           document.getElementById('oc-contact').className="google-form-after";
 
        }
 
-   }
+   };
 
+
+	$(window).load(function () {
+	    var mapDiv = document.getElementById('map');
+		var mapOptions = {
+			center: new naver.maps.LatLng(35.20086819906466, 129.06245620480954),
+			zoom : 7
+		}
+		var map = new naver.maps.Map('map', mapOptions);
+	});
     // default example
     // simplyCountdown('.simply-countdown-one', {
     //     year: d.getFullYear(),
@@ -663,4 +666,3 @@
 	</body>
 </html>
 
-3
