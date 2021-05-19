@@ -209,9 +209,7 @@
 	};
 
 	// Parallax
-	var parallax = function() {
-		$(window).stellar({horizontalScrolling: false, verticalOffset: 50,});
-	};
+	
 
 	
 	$(function(){

@@ -1355,7 +1355,7 @@
 }
 .icon-video2:before {
   content: "\ea39";
-  color:#FF6961;
+  color:#FF6961 !important;
 }
 .icon-vinyl:before {
   content: "\ea3a";

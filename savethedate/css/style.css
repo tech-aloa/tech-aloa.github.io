@@ -97,13 +97,13 @@ body {
 }
 
 a {
-  color: #F14E95;
+/*  color: #F14E95;*/
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #F14E95;
+/*  color: #F14E95;*/
   outline: none;
   text-decoration: none;
 }
