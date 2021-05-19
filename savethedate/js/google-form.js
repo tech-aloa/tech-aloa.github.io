@@ -4,9 +4,9 @@ $(function(){
 
 	  	var iframe = document.getElementById('google-form');
 
-		iframe.addEventListener('load', function() {
-		  console.log(iframe.contents().querySelector('form + div'))
-		})
+		// iframe.addEventListener('load', function() {
+		//   console.log(iframe.contents().querySelector('form + div'))
+		// })
 
 	  $("#google-form").on("load", function() {
 
