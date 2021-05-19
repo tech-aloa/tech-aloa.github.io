@@ -209,12 +209,12 @@
 	};
 
 	// Parallax
-	
+
 
 	
 	$(function(){
 		mobileMenuOutsideClick();
-		parallax();
+
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
