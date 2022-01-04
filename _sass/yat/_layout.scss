@@ -114,7 +114,7 @@ html {
 }
 
 .site-nav {
-  @include relative-font-size(1.125);
+  @include relative-font-size(0.9);
   line-height: $header-height;
   position: absolute;
   right: 0;
@@ -189,7 +189,7 @@ html {
  * Site footer
  */
 .site-footer {
-  @include relative-font-size(1.0);
+  @include relative-font-size(0.8);
   color: $footer-text-color;
   background-color: $footer-background-color;
   text-align: left;
@@ -306,7 +306,7 @@ html {
   }
 
   .post-meta {
-    font-size: $base-font-size;
+    font-size: $base-font-size * 0.9;
     color: $grey-color;
     margin-bottom: $spacing-unit * 0.5;
   }
@@ -324,6 +324,7 @@ html {
   }
 
   .post-tags .post-tag {
+    font-size: $base-font-size * 0.9;
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
