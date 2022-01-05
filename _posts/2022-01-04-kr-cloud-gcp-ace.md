@@ -6,14 +6,14 @@ lang-ref: gcp-ace
 subtitle: 
 categories: cloud
 tags: [gcp]
-badge_src: "/assets/images/cert/cloud/gcp/GCP_ACE_BADGE.PNG"
+badge_src: "/assets/images/cert/cloud/gcp/GCP_ACE_BADGE.png"
 ---
 
 이번 글에서는 GCP ACE자격증에 대한 전반적인 소개와 취득 후기에 대해 쓰고자 한다.  
 - GCP ACE에 대한 소개 
 - 자격증 취득 후기
 
-![Crepe]({{site.url}}/assets/images/cert/cloud/gcp/GCP_ACE_CERT.PNG)
+![Crepe]({{site.url}}/assets/images/cert/cloud/gcp/GCP_ACE_CERT.png)
 
 ## GCP ACE에 대한 소개 
 

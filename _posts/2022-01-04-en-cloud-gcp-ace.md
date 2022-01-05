@@ -6,14 +6,14 @@ lang-ref: gcp-ace
 subtitle: 
 categories: cloud
 tags: [gcp]
-badge_src: "/assets/images/cert/cloud/gcp/GCP_ACE_BADGE.PNG"
+badge_src: "/assets/images/cert/cloud/gcp/GCP_ACE_BADGE.png"
 ---
 
 In this article, I would like to write an overall introduction to the GCP ACE(Associate Cloud Engineer) certification and review of the acquisition. 
 - A general introduction to the GCP ACE certification. 
 - Review of the Exam.
 
-![Crepe]({{site.url}}/assets/images/cert/cloud/gcp/GCP_ACE_CERT.PNG)
+![Crepe]({{site.url}}/assets/images/cert/cloud/gcp/GCP_ACE_CERT.png)
 
 ## ACE certification 
 
