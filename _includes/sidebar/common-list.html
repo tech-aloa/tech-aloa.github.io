@@ -6,19 +6,19 @@
   {%- assign field = include.field -%}
 {%- endif -%}
 
+{%- assign all_posts = site.pages | where_exp: "item", "item.lang == page.lang" |size -%}
 <div class="common-list">
   <ul>
     <li>
       <a href="{{ '/index.html' | relative_url }}">
-        All<span>{{ site.posts.size | where: "item.lang", "page.lang" }}</span>
+        All<span>{{ all_posts }}</span>
       </a>
     </li>
 
     {% for key in  keys %}
       <li>
-        1
         <!-- <a href="{{ url }}#h-{{ key }}">
-          {{ key }} <span>{{ site.posts | where: "item.lang", "page.lang" item.field == item.key"  size}}</span>
+          {{ key }} <span>{{ site.posts  where_exp: "item", "item.lang == page.lang and item.field == item.key" | size}}</span>
         </a> -->
       </li>
     {% endfor %}
