@@ -10,15 +10,16 @@
   <ul>
     <li>
       <a href="{{ '/index.html' | relative_url }}">
-        All<span>{{ site.posts  where_exp: "item", "item.lang == page.lang"  size}}</span>
+        All<span>{{ site.posts | where: "item.lang", "page.lang" | size}}</span>
       </a>
     </li>
 
     {% for key in  keys %}
       <li>
-        <a href="{{ url }}#h-{{ key }}">
-          {{ key }} <span>{{ site.posts  where_exp: "item", "item.lang == page.lang and item.field == item.key"  size}}</span>
-        </a>
+        1
+        <!-- <a href="{{ url }}#h-{{ key }}">
+          {{ key }} <span>{{ site.posts | where: "item.lang", "page.lang" item.field == item.key"  size}}</span>
+        </a> -->
       </li>
     {% endfor %}
   </ul>
