@@ -10,7 +10,7 @@
   <ul>
     <li>
       <a href="{{ '/index.html' | relative_url }}">
-        All<span>{{ site.posts | where: "item.lang", "page.lang" | size}}</span>
+        All<span>{{ site.posts.size | where: "item.lang", "page.lang" }}</span>
       </a>
     </li>
 
