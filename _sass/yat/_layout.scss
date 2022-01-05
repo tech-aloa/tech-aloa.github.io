@@ -97,6 +97,7 @@ html {
 
   .site-brand-inner {
     @include relative-font-size(1.125);
+    font-family: blakely;
     font-weight: $base-font-weight;
     letter-spacing: -1px;
     transition: 0.1s filter color;
@@ -132,7 +133,8 @@ html {
     line-height: $base-line-height;
     color: $header-text-color;
     transition: 0.1s ease-in-out;
-
+    font-family: bakery;
+    font-weight: 400;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 24px;
@@ -225,6 +227,7 @@ html {
 
   .post-title {
     @include relative-font-size(2.625);
+    font-family: bakery;
     letter-spacing: -1px;
     line-height: 1;
 
@@ -278,7 +281,20 @@ html {
       }
     }
   }
-
+  .post-item{
+    display:flex;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .post-badge-img{
+    padding-right:23px;
+    padding-left:15px;
+  }
+  .post-desc{
+    flex: 0 0 66.6666666667%;
+    padding-right:15px;
+    padding-left:15px;
+  }
   .post-title {
     margin-bottom: $spacing-unit * 0.2;
     transition: 0.2s all;
@@ -313,6 +329,7 @@ html {
 
   .post-link {
     @include relative-font-size(1.65);
+    font-family: bakery;
     font-weight: $base-font-weight * 1.5;
     color: #333;
   }
@@ -407,6 +424,7 @@ html {
     overflow-wrap: normal;
     word-wrap: normal;
     word-break: normal;
+    font-family: bakery;
 
     h2 {
       @include relative-font-size(2);
@@ -611,6 +629,7 @@ html {
 
       > :nth-child(1) {
         @include relative-font-size(3.9);
+        font-family: bakery;
         letter-spacing: -1px;
         margin-bottom: 0.1em;
         font-weight: normal;
@@ -633,6 +652,8 @@ html {
 
       > :last-child {
         margin-bottom: 0;
+        font-family:bakery;
+        font-weight:300;
       }
     }
 

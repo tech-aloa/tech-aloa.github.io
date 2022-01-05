@@ -28,14 +28,14 @@ sidebar:
     {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
     {%- if result.size == 0 -%}
     <div class="post-nav">
-      {%- if page.previous -%}
+      {%- if page.previous and post.lang == page.lang -%}
         <a class="previous" href="{{ page.previous.url | relative_url }}" title="{{
           page.previous.title | escape }}">{{ page.previous.title | escape | truncatewords: 6 }}</a>
       {%- else -%}
       <span></span>
       {%- endif -%}
 
-      {%- if page.next -%}
+      {%- if page.next and post.lang == page.lang -%}
         <a class="next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | escape }}">{{ page.next.title | escape | truncatewords: 6 }}</a>
       {%- else -%}
       <span></span>
@@ -50,7 +50,9 @@ sidebar:
       <ul>
         {% assign posts = site[page.collection] | sample:4 %}
         {%- for post in posts -%}
+        {%- if post.lang == page.lang -%}
         <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {%- endif -%}
         {%- endfor -%}
       </ul>
     </div>
