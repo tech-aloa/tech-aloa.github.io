@@ -17,7 +17,7 @@
     </li>
 
     {% for key in  keys %}
-    {%- assign category_posts = site.posts | where_exp: "item", "item.lang == page.lang and item.field == item.key" | size -%}
+    {%- assign category_posts = site.posts | where_exp: "item", "item.lang == page.lang" | where_exp: "item", "item.field == item.key" | size -%}
       <li>
         <a href="{{ url }}#h-{{ key }}">
           {{ key }} <span>{{ category_posts }}</span>
